@@ -2,9 +2,15 @@ var webpack = require('webpack');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-    entry: './src/App.js',
+    entry: {
+        Core: './src/Core.js',
+        ACounter: './src/ACounter.js',
+        ACollection: './src/ACollection.js',
+        AForm: './src/AForm.js',
+        SetContainer: './src/SetContainer.js'
+      },
     output: {
-        filename: 'dist/app.bundle.js'
+        filename: 'dist/[name].bundle.js'
     },
     resolve: {
         extensions: ['.js', '.jsx'],
